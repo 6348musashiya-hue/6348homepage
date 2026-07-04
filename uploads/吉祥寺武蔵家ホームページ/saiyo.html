@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Helvetica Neue', Arial, 'Noto Sans JP', sans-serif;
+      background: #FFFFFF;
+      color: #1A1A1A;
+      line-height: 1.7;
+    }
+
+    @keyframes popIn {
+      0%   { opacity:0; transform:scale(.92) translateY(16px); }
+      100% { opacity:1; transform:scale(1) translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity:0; transform:translateY(24px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    .mc-input {
+      width:100%; border:2px solid #E0E0E0; background:#FAFAFA;
+      font-size:15px; padding:14px 16px; outline:none;
+      font-family:inherit; border-radius:8px; transition:border-color .2s;
+      color:#1A1A1A;
+    }
+    .mc-input:focus { border-color:#FFC72C; background:#fff; }
+    .mc-input::placeholder { color:#BDBDBD; }
+
+    @media (max-width:640px) {
+      .job-grid    { grid-template-columns:1fr !important; }
+      .detail-grid { grid-template-columns:1fr !important; gap:32px !important; }
+      .benefit-grid{ grid-template-columns:1fr !important; }
+      .hero-pad    { padding:64px 20px 56px !important; }
+      .sec-pad     { padding:56px 20px !important; }
+      .hero-title  { font-size:11vw !important; }
+    }
+  </style>
+</helmet>
+
+<!-- ══════ HERO ══════ -->
+<div class="hero-pad" style="background:#FFC72C; padding:88px 32px 72px; text-align:center; position:relative; overflow:hidden;">
+
+  <!-- decorative arcs -->
+  <div style="position:absolute; bottom:-120px; left:50%; transform:translateX(-50%); width:700px; height:240px; border-radius:50% 50% 0 0 / 100% 100% 0 0; background:rgba(255,255,255,.12); pointer-events:none;"></div>
+  <div style="position:absolute; top:-60px; right:-60px; width:200px; height:200px; border-radius:50%; background:rgba(218,41,28,.12); pointer-events:none;"></div>
+
+  <p style="font-size:12px; font-weight:700; letter-spacing:.38em; color:rgba(0,0,0,.45); margin-bottom:20px; text-transform:uppercase; animation:slideUp .5s ease both;">RECRUIT 2025</p>
+
+  <h1 class="hero-title" style="font-size:clamp(40px,8vw,80px); font-weight:900; line-height:1.1; color:#1A1A1A; letter-spacing:-.01em; margin-bottom:0; animation:popIn .6s .1s ease both; opacity:0; animation-fill-mode:forwards;">
+    一緒に働こう。<br>
+    <span style="color:#DA291C;">楽しく、</span>本気で。
+  </h1>
+
+  <div style="width:48px; height:4px; background:#DA291C; border-radius:2px; margin:24px auto 22px; animation:slideUp .6s .3s ease both; opacity:0; animation-fill-mode:forwards;"></div>
+
+  <p style="font-size:15px; color:rgba(0,0,0,.6); font-weight:400; max-width:440px; margin:0 auto; line-height:1.9; animation:slideUp .6s .35s ease both; opacity:0; animation-fill-mode:forwards;">
+    1999年から吉祥寺で愛され続けた味。<br>
+    スープへのこだわりを一緒に守る仲間を募集中！
+  </p>
+
+  <div style="margin-top:32px; display:flex; justify-content:center; gap:8px; flex-wrap:wrap; animation:slideUp .6s .45s ease both; opacity:0; animation-fill-mode:forwards;">
+    <span style="background:#DA291C; color:#fff; font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px; letter-spacing:.05em;">未経験OK</span>
+    <span style="background:#1A1A1A; color:#fff; font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px; letter-spacing:.05em;">週2日〜</span>
+    <span style="background:#fff; color:#1A1A1A; font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px; letter-spacing:.05em;">まかない無料</span>
+  </div>
+</div>
+
+<!-- ══════ POSITION ══════ -->
+<div class="sec-pad" style="background:#FFFFFF; padding:72px 32px;">
+  <div style="max-width:860px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:48px;">
+      <p style="font-size:11px; font-weight:700; letter-spacing:.4em; color:#DA291C; text-transform:uppercase; margin-bottom:8px;">Position</p>
+      <h2 style="font-size:clamp(24px,4vw,36px); font-weight:900; color:#1A1A1A;">募集職種</h2>
+    </div>
+
+    <div class="job-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:56px;">
+      <!-- アルバイト -->
+      <div style="border:2px solid #FFC72C; border-radius:16px; padding:32px 28px; background:#FFFDF0; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:5px; background:#FFC72C; border-radius:16px 16px 0 0;"></div>
+        <span style="display:inline-block; background:#FFC72C; color:#1A1A1A; font-size:10px; font-weight:900; padding:4px 12px; border-radius:20px; margin-bottom:16px; letter-spacing:.1em; text-transform:uppercase;">Part Time</span>
+        <h3 style="font-size:26px; font-weight:900; color:#1A1A1A; margin-bottom:10px;">アルバイト</h3>
+        <p style="font-size:13px; color:#666; line-height:2;">キッチン・ホールスタッフ<br>週2日〜OK。学生・フリーターも歓迎！</p>
+      </div>
+      <!-- 社員 -->
+      <div style="border:2px solid #DA291C; border-radius:16px; padding:32px 28px; background:#FFF5F5; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:5px; background:#DA291C; border-radius:16px 16px 0 0;"></div>
+        <span style="display:inline-block; background:#DA291C; color:#fff; font-size:10px; font-weight:900; padding:4px 12px; border-radius:20px; margin-bottom:16px; letter-spacing:.1em; text-transform:uppercase;">Full Time</span>
+        <h3 style="font-size:26px; font-weight:900; color:#1A1A1A; margin-bottom:10px;">社員・店長候補</h3>
+        <p style="font-size:13px; color:#666; line-height:2;">店舗運営・マネジメント<br>アルバイトからのキャリアアップも歓迎！</p>
+      </div>
+    </div>
+
+    <!-- detail grid -->
+    <div class="detail-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+      <!-- アルバイト詳細 -->
+      <div>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+          <div style="width:4px; height:20px; background:#FFC72C; border-radius:2px;"></div>
+          <p style="font-size:11px; font-weight:700; letter-spacing:.3em; color:#FFC72C; text-transform:uppercase;">Part Time — 勤務条件</p>
+        </div>
+        <div style="border-bottom:1px solid #F0F0F0; padding:14px 0; display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:start;">
+          <span style="font-size:11px; font-weight:700; color:#BDBDBD; padding-top:2px;">時給</span>
+          <span style="font-size:13px; color:#1A1A1A; line-height:1.8;">¥1,250〜¥1,300<br><span style="font-size:11px; color:#999;">経験・スキルにより優遇</span></span>
+        </div>
+        <div style="border-bottom:1px solid #F0F0F0; padding:14px 0; display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:start;">
+          <span style="font-size:11px; font-weight:700; color:#BDBDBD; padding-top:2px;">勤務</span>
+          <span style="font-size:13px; color:#1A1A1A; line-height:1.8;">シフト制<br><span style="font-size:11px; color:#999;">週2日・1日3時間〜OK</span></span>
+        </div>
+        <div style="border-bottom:1px solid #F0F0F0; padding:14px 0; display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:start;">
+          <span style="font-size:11px; font-weight:700; color:#BDBDBD; padding-top:2px;">内容</span>
+          <span style="font-size:13px; color:#1A1A1A;">キッチン・ホール業務</span>
+        </div>
+        <div style="padding:14px 0; display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:start;">
+          <span style="font-size:11px; font-weight:700; color:#BDBDBD; padding-top:2px;">資格</span>
+          <span style="font-size:13px; color:#1A1A1A; line-height:1.8;">未経験OK<br><span style="font-size:11px; color:#999;">学生・フリーター・主婦(夫)歓迎</span></span>
+        </div>
+      </div>
+      <!-- 社員詳細 -->
+      <div>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+          <div style="width:4px; height:20px; background:#DA291C; border-radius:2px;"></div>
+          <p style="font-size:11px; font-weight:700; letter-spacing:.3em; color:#DA291C; text-transform:uppercase;">Full Time — 勤務条件</p>
+        </div>
+        <div style="border-bottom:1px solid #F0F0F0; padding:14px 0; display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:start;">
+          <span style="font-size:11px; font-weight:700; color:#BDBDBD; padding-top:2px;">月給</span>
+          <span style="font-size:13px; color:#1A1A1A; line-height:1.8;">¥280,000〜¥400,000<br><span style="font-size:11px; color:#999;">経験・役職により決定</span></span>
+        </div>
+        <div style="border-bottom:1px solid #F0F0F0; padding:14px 0; display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:start;">
+          <span style="font-size:11px; font-weight:700; color:#BDBDBD; padding-top:2px;">勤務</span>
+          <span style="font-size:13px; color:#1A1A1A;">シフト制（実働8時間）</span>
+        </div>
+        <div style="border-bottom:1px solid #F0F0F0; padding:14px 0; display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:start;">
+          <span style="font-size:11px; font-weight:700; color:#BDBDBD; padding-top:2px;">内容</span>
+          <span style="font-size:13px; color:#1A1A1A; line-height:1.8;">店舗運営全般<br><span style="font-size:11px; color:#999;">仕込み・接客・スタッフ管理・発注</span></span>
+        </div>
+        <div style="padding:14px 0; display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:start;">
+          <span style="font-size:11px; font-weight:700; color:#BDBDBD; padding-top:2px;">資格</span>
+          <span style="font-size:13px; color:#1A1A1A; line-height:1.8;">飲食業経験者歓迎<br><span style="font-size:11px; color:#999;">未経験も応相談</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ BENEFITS ══════ -->
+<div class="sec-pad" style="background:#FFC72C; padding:72px 32px;">
+  <div style="max-width:860px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:48px;">
+      <p style="font-size:11px; font-weight:700; letter-spacing:.4em; color:rgba(0,0,0,.45); text-transform:uppercase; margin-bottom:8px;">Benefits</p>
+      <h2 style="font-size:clamp(24px,4vw,36px); font-weight:900; color:#1A1A1A;">待遇・福利厚生</h2>
+    </div>
+    <div class="benefit-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+      <div style="background:#fff; border-radius:12px; padding:18px 20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:20px; flex-shrink:0;">🍜</span>
+        <span style="font-size:13px; font-weight:700; color:#1A1A1A;">まかない食あり（勤務日は無料）</span>
+      </div>
+      <div style="background:#fff; border-radius:12px; padding:18px 20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:20px; flex-shrink:0;">🚃</span>
+        <span style="font-size:13px; font-weight:700; color:#1A1A1A;">交通費支給</span>
+      </div>
+      <div style="background:#fff; border-radius:12px; padding:18px 20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:20px; flex-shrink:0;">📈</span>
+        <span style="font-size:13px; font-weight:700; color:#1A1A1A;">昇給あり（随時査定）</span>
+      </div>
+      <div style="background:#fff; border-radius:12px; padding:18px 20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:20px; flex-shrink:0;">🏥</span>
+        <span style="font-size:13px; font-weight:700; color:#1A1A1A;">社会保険完備（社員）</span>
+      </div>
+      <div style="background:#fff; border-radius:12px; padding:18px 20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:20px; flex-shrink:0;">📅</span>
+        <span style="font-size:13px; font-weight:700; color:#1A1A1A;">シフト希望考慮</span>
+      </div>
+      <div style="background:#fff; border-radius:12px; padding:18px 20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:20px; flex-shrink:0;">🚀</span>
+        <span style="font-size:13px; font-weight:700; color:#1A1A1A;">アルバイトから社員登用あり</span>
+      </div>
+      <div style="background:#fff; border-radius:12px; padding:18px 20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:20px; flex-shrink:0;">📚</span>
+        <span style="font-size:13px; font-weight:700; color:#1A1A1A;">充実した研修制度（マンツーマン）</span>
+      </div>
+      <div style="background:#fff; border-radius:12px; padding:18px 20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:20px; flex-shrink:0;">✈️</span>
+        <div>
+          <span style="font-size:13px; font-weight:700; color:#1A1A1A; display:block;">海外研修制度あり（社員対象）</span>
+          <span style="font-size:11px; color:#999; font-weight:400;">実績：アメリカ・中国・シンガポール・台湾・フィリピン</span>
+        </div>
+      </div>
+      <div style="background:#fff; border-radius:12px; padding:18px 20px; display:flex; align-items:center; gap:14px;">
+        <span style="font-size:20px; flex-shrink:0;">👕</span>
+        <span style="font-size:13px; font-weight:700; color:#1A1A1A;">制服貸与</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ LOCATION ══════ -->
+<div class="sec-pad" style="background:#FFFFFF; padding:72px 32px;">
+  <div style="max-width:860px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:40px;">
+      <p style="font-size:11px; font-weight:700; letter-spacing:.4em; color:#DA291C; text-transform:uppercase; margin-bottom:8px;">Location</p>
+      <h2 style="font-size:clamp(24px,4vw,36px); font-weight:900; color:#1A1A1A;">勤務地</h2>
+    </div>
+    <div style="background:#FFFDF0; border:2px solid #FFC72C; border-radius:16px; padding:28px 32px; display:flex; align-items:flex-start; gap:20px;">
+      <span style="font-size:32px; flex-shrink:0;">📍</span>
+      <div>
+        <p style="font-size:18px; font-weight:900; color:#1A1A1A; margin-bottom:8px;">吉祥寺武蔵家（本店）</p>
+        <p style="font-size:13px; color:#666; line-height:2;">東京都武蔵野市吉祥寺南町1-8-11<br>JR・京王井の頭線 吉祥寺駅より徒歩約1分</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ APPLY ══════ -->
+<div class="sec-pad" style="background:#1A1A1A; padding:80px 32px;">
+  <div style="max-width:520px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:40px;">
+      <p style="font-size:11px; font-weight:700; letter-spacing:.4em; color:#FFC72C; text-transform:uppercase; margin-bottom:8px;">Apply</p>
+      <h2 style="font-size:clamp(24px,4vw,36px); font-weight:900; color:#FFFFFF;">応募する</h2>
+      <p style="font-size:13px; color:#888; margin-top:12px; line-height:1.9;">必要事項を入力して送信してください。<br>3営業日以内にご連絡します！</p>
+    </div>
+
+    <div id="applyThanks" style="display:none; text-align:center; padding:48px 0;">
+      <div style="font-size:48px; margin-bottom:16px;">🎉</div>
+      <p style="font-size:24px; font-weight:900; color:#FFC72C; margin-bottom:10px;">ありがとうございます！</p>
+      <p style="font-size:13px; color:#888; line-height:2;">ご応募を受け付けました。<br>3営業日以内にご連絡いたします。</p>
+    </div>
+
+    <form id="applyForm" style="display:flex; flex-direction:column; gap:20px;">
+      <div>
+        <label style="display:block; font-size:11px; font-weight:700; color:#FFC72C; margin-bottom:8px; letter-spacing:.1em;">お名前</label>
+        <input id="f-name" class="mc-input" type="text" required placeholder="山田 太郎">
+      </div>
+      <div>
+        <label style="display:block; font-size:11px; font-weight:700; color:#FFC72C; margin-bottom:12px; letter-spacing:.1em;">性別</label>
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+          <label style="display:flex; align-items:center; gap:8px; font-size:14px; color:#ccc; cursor:pointer;"><input type="radio" name="gender" value="男性" style="accent-color:#FFC72C; width:16px; height:16px;"> 男性</label>
+          <label style="display:flex; align-items:center; gap:8px; font-size:14px; color:#ccc; cursor:pointer;"><input type="radio" name="gender" value="女性" style="accent-color:#FFC72C; width:16px; height:16px;"> 女性</label>
+          <label style="display:flex; align-items:center; gap:8px; font-size:14px; color:#ccc; cursor:pointer;"><input type="radio" name="gender" value="その他" style="accent-color:#FFC72C; width:16px; height:16px;"> その他</label>
+        </div>
+      </div>
+      <div>
+        <label style="display:block; font-size:11px; font-weight:700; color:#FFC72C; margin-bottom:8px; letter-spacing:.1em;">年齢</label>
+        <input id="f-age" class="mc-input" type="number" required min="15" max="80" placeholder="例：25">
+      </div>
+      <div>
+        <label style="display:block; font-size:11px; font-weight:700; color:#FFC72C; margin-bottom:8px; letter-spacing:.1em;">メールアドレス <span style="color:rgba(255,255,255,.85); font-size:10px; letter-spacing:0; font-weight:600;">どちらか必須</span></label>
+        <input id="f-email" class="mc-input" type="email" placeholder="example@email.com">
+      </div>
+      <div>
+        <label style="display:block; font-size:11px; font-weight:700; color:#FFC72C; margin-bottom:8px; letter-spacing:.1em;">電話番号 <span style="color:rgba(255,255,255,.85); font-size:10px; letter-spacing:0; font-weight:600;">どちらか必須</span></label>
+        <input id="f-phone" class="mc-input" type="tel" placeholder="090-0000-0000">
+      </div>
+      <div id="applyError" style="display:none; font-size:12px; color:#FF6B6B; font-weight:700;"></div>
+      <button id="applyBtn" type="button" onclick="submitApply()"
+        style="background:#FFC72C; color:#1A1A1A; font-size:16px; font-weight:900; padding:18px 0; border:none; cursor:pointer; border-radius:50px; width:100%; letter-spacing:.05em; transition:background .2s, transform .1s;"
+        onmouseover="this.style.background='#FFD954'" onmouseout="this.style.background='#FFC72C'"
+        onmousedown="this.style.transform='scale(.97)'" onmouseup="this.style.transform='scale(1)'">
+        応募する！
+      </button>
+      <p style="font-size:11px; color:#444; text-align:center;">※ ご応募の内容は採用担当のみが確認します。</p>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="background:#FFC72C; padding:20px 32px; text-align:center;">
+  <p style="font-size:12px; font-weight:700; color:rgba(0,0,0,.45); letter-spacing:.2em;">THEE KICHIJOJI MUSASHIYA &nbsp;|&nbsp; 吉祥寺武蔵家</p>
+</div>
+
+<script>
+var DISCORD_WEBHOOK = 'https://discordapp.com/api/webhooks/1515564909897977986/5lwKyBEtAcRU7qbxjLHUHBbCAtnwQqcqKA8sMEdA_B9PXf-qV9JsTdne-QgW0q3U-ME-';
+
+function submitApply() {
+  var name   = document.getElementById('f-name').value.trim();
+  var age    = document.getElementById('f-age').value.trim();
+  var email  = document.getElementById('f-email').value.trim();
+  var phone  = document.getElementById('f-phone').value.trim();
+  var gender = (document.querySelector('input[name="gender"]:checked') || {}).value || '';
+  var errEl  = document.getElementById('applyError');
+
+  if (!name || !gender || !age) {
+    errEl.textContent = '名前・性別・年齢を入力してください。';
+    errEl.style.display = 'block'; return;
+  }
+  if (!email && !phone) {
+    errEl.textContent = 'メールアドレスまたは電話番号を入力してください。';
+    errEl.style.display = 'block'; return;
+  }
+  errEl.style.display = 'none';
+
+  var btn = document.getElementById('applyBtn');
+  btn.textContent = '送信中…'; btn.style.opacity = '.6'; btn.disabled = true;
+
+  fetch(DISCORD_WEBHOOK, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ content: [
+      '📋 **新しい応募が届きました！**',
+      '━━━━━━━━━━━━━━━━━━',
+      '👤 **名前：** ' + name,
+      '⚧ **性別：** ' + gender,
+      '🎂 **年齢：** ' + age + '歳',
+      '📧 **Email：** ' + (email || '未記入'),
+      '📱 **Phone：** ' + (phone || '未記入'),
+      '━━━━━━━━━━━━━━━━━━',
+      '🏮 吉祥寺武蔵家 採用フォームより'
+    ].join('\n') })
+  })
+  .then(function(res) {
+    if (res.ok) {
+      document.getElementById('applyForm').style.display = 'none';
+      document.getElementById('applyThanks').style.display = 'block';
+    } else { throw new Error(); }
+  })
+  .catch(function() {
+    errEl.textContent = '送信に失敗しました。しばらくしてお試しください。';
+    errEl.style.display = 'block';
+    btn.textContent = '応募する！'; btn.style.opacity = '1'; btn.disabled = false;
+  });
+}
+</script>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 900}}"></script>
+</body>
+</html>
