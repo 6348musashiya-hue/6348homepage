@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Zen+Old+Mincho:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Noto Sans JP','Helvetica Neue',Helvetica,Arial,sans-serif; }
+    h1, h2, h3, h4, p { margin: 0; font-family: inherit; font-weight: inherit; font-size: inherit; line-height: inherit; color: inherit; letter-spacing: inherit; }
+  </style>
+</helmet>
+
+<div style="min-height:100vh;background:#FFC72C;padding:0 0 48px;display:flex;flex-direction:column;align-items:center;" data-screen-label="青森まっしぐら">
+<section style="width:100%;max-width:412px;background:#fff;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.18);">
+  <div style="background:#DA291C;padding:14px 16px;display:flex;align-items:center;gap:10px;position:relative;">
+    <a href="aburasoba.dc.html" style="display:flex;align-items:center;gap:6px;text-decoration:none;background:rgba(255,255,255,.2);border-radius:20px;padding:6px 12px;flex:none;position:relative;z-index:2;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      <span style="color:#fff;font-size:12px;font-weight:700;white-space:nowrap;">もどる</span>
+    </a>
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#fff;font-weight:900;font-size:15px;letter-spacing:.06em;white-space:nowrap;z-index:1;">まっしぐら</span>
+    <a href="about.dc.html" style="display:inline-flex;align-items:center;text-decoration:none;margin-left:auto;position:relative;z-index:2;">
+      <img style="height:32px;width:auto;display:block;" src="images/img1.png" alt="吉祥寺武蔵家">
+    </a>
+  </div>
+  <div style="background:#FFC72C;padding:44px 16px 40px;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.06) 0 2px,transparent 2px 14px);pointer-events:none;"></div>
+    <div style="display:inline-block;background:#000;color:#FFC72C;font-weight:900;font-size:11px;letter-spacing:.2em;padding:5px 14px;border-radius:24px;">青森直送 · 農家直達</div>
+    <div style="margin-top:20px;font-size:clamp(13px,3.8vw,15px);font-weight:700;color:#000;opacity:.7;letter-spacing:.08em;">当店のお米は</div>
+    <div style="margin-top:6px;font-size:clamp(13px,3.8vw,15px);font-weight:700;color:#000;opacity:.7;letter-spacing:.08em;">青森県産</div>
+    <h1 style="margin-top:8px;font-family:'Zen Old Mincho',serif;font-weight:900;color:#000;font-size:clamp(28px,9.5vw,56px);line-height:.95;letter-spacing:.02em;white-space:nowrap;">『まっしぐら』</h1>
+    <div style="margin-top:8px;font-size:clamp(12px,3.5vw,14px);font-weight:700;color:#000;opacity:.6;letter-spacing:.1em;">MASSHIGURA RICE</div>
+    <div style="margin-top:6px;font-size:clamp(13px,3.8vw,15px);font-weight:700;color:#000;opacity:.7;letter-spacing:.08em;">を使用しています</div>
+    <div style="margin-top:10px;display:flex;align-items:center;justify-content:center;gap:10px;">
+      <span style="height:1px;width:28px;background:#000;opacity:.3;"></span>
+      <span style="font-size:12px;font-weight:700;color:#000;opacity:.6;letter-spacing:.06em;">青森県産 · 小野やファーム</span>
+      <span style="height:1px;width:28px;background:#000;opacity:.3;"></span>
+    </div>
+    <div style="margin:28px auto 0;width:min(280px,85vw);border-radius:20px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.18);">
+      <img src="images/img-rice.webp" alt="小野やファーム" style="display:block;width:100%;height:auto;">
+    </div>
+  </div>
+  <div style="background:#000;padding:36px 28px 32px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.3em;color:#FFC72C;margin-bottom:14px;">THE STORY</div>
+    <div style="font-family:'Zen Old Mincho',serif;font-weight:700;color:#fff;font-size:clamp(20px,6vw,24px);line-height:1.5;letter-spacing:.04em;">家系ラーメンに、<br>ライスは必須だ。</div>
+    <p style="margin:16px 0 0;color:#ccc;font-size:13px;line-height:2;letter-spacing:.04em;">家系ラーメンは、濃厚な醤油豚骨スープとライスが一体になって完成する。器の底に沈んだタレをライスに絡め、最後の一粒まですすりきる——これが家系の食べ方。だから吉祥寺武蔵家は、そのライスにもこだわった。</p>
+    <div style="margin-top:20px;height:1px;background:rgba(255,199,44,.3);"></div>
+    <div style="margin-top:20px;font-family:'Zen Old Mincho',serif;font-weight:700;color:#FFC72C;font-size:clamp(18px,5.4vw,22px);line-height:1.5;">青森・小野やから、直送。</div>
+    <p style="margin:14px 0 0;color:#ccc;font-size:13px;line-height:2;letter-spacing:.04em;">選んだのは青森が誇るブランド米「まっしぐら」。生産者・小野やファームが丁寧に育て、収穫後すぐに吉祥寺武蔵家へ直送。農家と食卓の距離を、できるだけ近くに。</p>
+  </div>
+  <div style="padding:32px 22px 0;">
+    <div style="text-align:center;font-size:10px;font-weight:700;letter-spacing:.3em;color:#000;opacity:.5;margin-bottom:20px;">まっしぐらの3つの理由</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:flex-start;gap:16px;background:#FFC72C;border-radius:20px;padding:20px;">
+        <div style="width:44px;height:44px;border-radius:14px;background:#000;flex:none;display:flex;align-items:center;justify-content:center;font-weight:900;color:#FFC72C;font-size:20px;">1</div>
+        <div><div style="font-weight:900;color:#000;font-size:15px;white-space:nowrap;">あっさり、だから引き立てる</div><div style="font-size:12px;color:#000;opacity:.65;margin-top:5px;line-height:1.7;">粘り気が少なくさっぱりとした食味。濃厚な家系スープのタレと合わせても、くどくならない。</div></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;background:#000;border-radius:20px;padding:20px;">
+        <div style="width:44px;height:44px;border-radius:14px;background:#FFC72C;flex:none;display:flex;align-items:center;justify-content:center;font-weight:900;color:#000;font-size:20px;">2</div>
+        <div><div style="font-weight:900;color:#fff;font-size:15px;white-space:nowrap;">食味ランキング「特A」取得</div><div style="font-size:12px;color:#ccc;margin-top:5px;line-height:1.7;">日本穀物検定協会で特A評価を獲得。ツヤがあり粒ぞろい。</div></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;border:2px solid #000;border-radius:20px;padding:20px;">
+        <div style="width:44px;height:44px;border-radius:14px;background:#DA291C;flex:none;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:20px;">3</div>
+        <div><div style="font-weight:900;color:#000;font-size:15px;white-space:nowrap;">青森から毎日直送</div><div style="font-size:12px;color:#000;opacity:.65;margin-top:5px;line-height:1.7;">小野やファーム直送。収穫後すぐに発送するから、鮮度が違う。</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin:28px 22px 0;background:#FFC72C;border-radius:20px;padding:24px 20px;text-align:center;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.3em;color:#000;opacity:.55;">HOW TO EAT MAX</div>
+    <div style="font-family:'Zen Old Mincho',serif;font-weight:900;color:#000;font-size:clamp(17px,5vw,20px);margin-top:12px;line-height:1.6;letter-spacing:.04em;">丼の底のタレをすくって<br>ライスに絡める。<br>これが家系MAX流。</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px;">
+      <div style="background:#000;color:#FFC72C;font-weight:900;font-size:12px;padding:10px 18px;border-radius:20px;text-align:left;">Step 1 — 油そばを注文</div>
+      <div style="background:#000;color:#FFC72C;font-weight:900;font-size:12px;padding:10px 18px;border-radius:20px;text-align:left;">Step 2 — 「ライス」を選ぶ（無料）</div>
+      <div style="background:#DA291C;color:#fff;font-weight:900;font-size:12px;padding:10px 18px;border-radius:20px;text-align:left;">Step 3 — タレとライスでMAX完成</div>
+    </div>
+  </div>
+  <div style="padding:32px 22px 36px;text-align:center;">
+    <a href="aburasoba.dc.html" style="display:block;background:#DA291C;color:#fff;font-weight:900;font-size:16px;letter-spacing:.1em;padding:18px;border-radius:24px;text-decoration:none;white-space:nowrap;">← 油そばページにもどる</a>
+  </div>
+</section>
+</div>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Noto Sans JP','Helvetica Neue',Helvetica,Arial,sans-serif; }
+    h1, h2, h3, h4, p { margin: 0; font-family: inherit; font-weight: inherit; font-size: inherit; line-height: inherit; color: inherit; letter-spacing: inherit; }
+    @keyframes bounce { 0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);} }
+    @keyframes wiggle { 0%,100%{transform:rotate(-2deg);}50%{transform:rotate(2deg);} }
+    @keyframes tapBlink { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.92);} }
+    @keyframes sparkleA { 0%,100%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(0deg);}50%{opacity:1;transform:translate(-50%,-50%) scale(1.2) rotate(180deg);} }
+    @keyframes sparkleB { 0%,100%{opacity:.15;transform:translate(-50%,-50%) scale(.5) rotate(0deg);}50%{opacity:1;transform:translate(-50%,-50%) scale(1.4) rotate(-180deg);} }
+    @keyframes sparkleGlow { 0%,100%{text-shadow:3px 3px 0 #fff, 0 0 0 rgba(255,199,44,0);}50%{text-shadow:3px 3px 0 #fff, 0 0 24px rgba(255,199,44,.9), 0 0 8px rgba(255,255,255,.7);} }
+  </style>
+</helmet>
+
+<div style="min-height:100vh;background:#FFC72C;padding:12px 0 48px;display:flex;justify-content:center;" data-screen-label="トップ / 家系MAX油そば">
+<section style="width:100%;max-width:412px;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.18);">
+  <div style="background:#DA291C;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;">
+    <span style="background:#fff;color:#DA291C;font-size:11px;font-weight:900;letter-spacing:.1em;padding:5px 10px;border-radius:20px;white-space:nowrap;">SUMMER ONLY</span>
+    <a href="about.dc.html" style="display:inline-flex;align-items:center;text-decoration:none;margin-left:auto;">
+      <img src="images/img1.png" alt="吉祥寺武蔵家" style="display:block;width:min(160px,42vw);height:auto;">
+    </a>
+  </div>
+  <div style="background:#FFC72C;padding:28px 16px 32px;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:18px;left:18px;width:12px;height:12px;border-radius:50%;background:#DA291C;animation:bounce 2.4s ease-in-out infinite;"></div>
+    <div style="position:absolute;top:42px;right:24px;width:9px;height:9px;border-radius:50%;background:#fff;"></div>
+    <div style="position:absolute;bottom:20px;left:28px;width:7px;height:7px;border-radius:50%;background:#fff;"></div>
+    <div style="position:absolute;bottom:32px;right:20px;width:13px;height:13px;border-radius:50%;background:#DA291C;animation:bounce 2.8s ease-in-out infinite .4s;"></div>
+    <div style="display:inline-block;background:#000;color:#FFC72C;font-weight:900;font-size:clamp(11px,3.2vw,13px);letter-spacing:.12em;padding:6px 14px;border-radius:24px;white-space:nowrap;">夏祭り限定 NEW!</div>
+    <h1 style="margin:0;">
+      <span style="display:block;margin-top:16px;font-weight:900;color:#000;font-size:clamp(34px,10vw,48px);letter-spacing:-.02em;line-height:1.2;white-space:nowrap;">家系MAX</span>
+      <span style="display:block;margin-top:10px;position:relative;font-weight:900;color:#DA291C;font-size:clamp(50px,16vw,76px);letter-spacing:-.04em;line-height:1.2;white-space:nowrap;text-shadow:3px 3px 0 #fff;animation:sparkleGlow 2.2s ease-in-out infinite;">
+        <span aria-hidden="true" style="position:absolute;top:-6%;left:8%;font-size:.34em;color:#FFC72C;text-shadow:0 0 10px rgba(255,199,44,.9);animation:sparkleA 1.6s ease-in-out infinite;pointer-events:none;">✦</span>
+        <span aria-hidden="true" style="position:absolute;top:18%;left:32%;font-size:.2em;color:#fff;text-shadow:0 0 8px #FFC72C;animation:sparkleB 1.9s ease-in-out infinite .35s;pointer-events:none;">✦</span>
+        <span aria-hidden="true" style="position:absolute;top:-4%;right:6%;font-size:.4em;color:#fff;text-shadow:0 0 12px #FFC72C;animation:sparkleA 1.7s ease-in-out infinite .5s;pointer-events:none;">✦</span>
+        <span aria-hidden="true" style="position:absolute;top:50%;right:24%;font-size:.16em;color:#FFC72C;text-shadow:0 0 6px rgba(255,255,255,.9);animation:sparkleB 1.4s ease-in-out infinite .8s;pointer-events:none;">✦</span>
+        <span aria-hidden="true" style="position:absolute;bottom:4%;right:14%;font-size:.26em;color:#FFC72C;text-shadow:0 0 10px rgba(255,255,255,.9);animation:sparkleA 2s ease-in-out infinite 1.1s;pointer-events:none;">✦</span>
+        <span aria-hidden="true" style="position:absolute;bottom:8%;left:18%;font-size:.18em;color:#fff;text-shadow:0 0 8px #FFC72C;animation:sparkleB 1.8s ease-in-out infinite .2s;pointer-events:none;">✦</span>
+        油そば
+      </span>
+    </h1>
+    <p style="margin:16px auto 0;color:#000;font-weight:500;font-size:clamp(12px,3.5vw,15px);line-height:1.6;max-width:280px;">いつもの家系麺は、あえて短く。<br>夏のMAXをすすりつくせ！！</p>
+  </div>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_l2096Dbsxz4BNDyjDaU7VsWhLzfXLOqOXeUcmwjmoHP6Mg/viewform" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;background:#000;padding:14px 16px;text-decoration:none;gap:10px;animation:tapBlink 4s ease-in-out infinite;">
+    <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;">
+      <div style="width:34px;height:34px;background:#FFC72C;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;font-size:17px;">🎟️</div>
+      <div style="min-width:0;">
+        <div style="color:#FFC72C;font-weight:900;font-size:clamp(14px,4.2vw,17px);">アンケートに答えて</div>
+        <div style="color:#fff;font-weight:700;font-size:clamp(13px,4vw,16px);margin-top:2px;">次回ライス無料券をGET！</div>
+      </div>
+    </div>
+    <div style="background:#DA291C;color:#fff;font-weight:900;font-size:clamp(12px,3.6vw,14px);padding:8px 14px;border-radius:20px;white-space:nowrap;flex:none;">答える ›</div>
+  </a>
+  <div style="position:relative;background:#fff;">
+    <div style="padding:16px 0 0;"><div style="background:#F3EBD8;"><img src="images/img-oiled-soba-hero.jpg" style="display:block;width:100%;height:auto;"></div></div>
+    <div style="position:absolute;top:-2px;right:12px;background:#DA291C;color:#fff;width:clamp(110px,35vw,144px);height:clamp(110px,35vw,144px);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(218,41,28,.45);border:4px solid #fff;animation:wiggle 4s ease-in-out infinite;">
+      <span style="font-size:clamp(11px,3.2vw,14px);font-weight:700;letter-spacing:.1em;line-height:1;">ONLY</span>
+      <span style="display:flex;align-items:flex-end;line-height:1;margin-top:3px;"><span style="font-size:clamp(18px,5.5vw,26px);font-weight:900;padding-bottom:6px;">¥</span><span style="font-size:clamp(40px,14vw,58px);font-weight:900;letter-spacing:-.02em;">900</span></span>
+      <span style="font-size:clamp(9px,2.6vw,12px);font-weight:500;letter-spacing:.08em;margin-top:1px;opacity:.9;">税込</span>
+    </div>
+  </div>
+  <div style="margin:16px 14px 0;background:#FFC72C;border-radius:18px;padding:16px 14px;text-align:center;">
+    <div style="font-size:clamp(14px,4vw,16px);font-weight:900;color:#000;opacity:.85;letter-spacing:.04em;white-space:nowrap;">どちらか好きな方をお選びください</div>
+    <div style="font-size:clamp(9px,2.6vw,11px);font-weight:700;letter-spacing:.16em;color:#000;opacity:.5;margin-top:3px;">CHOOSE YOUR FREE</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:10px;">
+      <a href="rice.dc.html" style="background:#fff;color:#000;font-weight:900;font-size:clamp(17px,5.4vw,21px);padding:10px 22px;border-radius:32px;white-space:nowrap;text-decoration:none;display:inline-block;">ライス</a>
+      <span style="font-weight:900;color:#000;font-size:clamp(15px,4.5vw,18px);">or</span>
+      <span style="background:#000;color:#FFC72C;font-weight:900;font-size:clamp(17px,5.4vw,21px);padding:10px 22px;border-radius:32px;white-space:nowrap;display:inline-block;">大盛り</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px;animation:tapBlink 1.2s ease-in-out infinite;">
+      <div style="width:38px;height:38px;background:#DA291C;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;line-height:1;">👆</div>
+      <span style="font-size:clamp(11px,3.2vw,12px);font-weight:900;color:#DA291C;white-space:nowrap;">ライスの詳細はこちら</span>
+    </div>
+  </div>
+  <div style="margin:16px 14px 0;padding:18px 14px;border:2px solid #000;border-radius:20px;">
+    <div style="text-align:center;"><span style="display:inline-block;background:#000;color:#FFC72C;font-weight:900;font-size:clamp(10px,3vw,11px);letter-spacing:.1em;padding:5px 12px;border-radius:20px;white-space:nowrap;">MAX標準仕様</span></div>
+    <div style="text-align:center;font-weight:800;color:#000;font-size:clamp(12px,3.6vw,15px);margin-top:10px;white-space:nowrap;">最初から、吉祥寺武蔵家の濃さ。</div>
+    <div style="text-align:center;font-weight:900;color:#DA291C;font-size:clamp(11px,3.4vw,14px);margin-top:5px;white-space:nowrap;letter-spacing:.04em;">『アジコメアブラオオメカタメ』</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:12px;">
+      <div style="background:#FFC72C;border-radius:12px;text-align:center;padding:12px 2px;"><div style="font-weight:900;color:#000;font-size:clamp(13px,4.2vw,18px);white-space:nowrap;">味濃いめ</div></div>
+      <div style="background:#FFC72C;border-radius:12px;text-align:center;padding:12px 2px;"><div style="font-weight:900;color:#000;font-size:clamp(13px,4.2vw,18px);white-space:nowrap;">油多め</div></div>
+      <div style="background:#FFC72C;border-radius:12px;text-align:center;padding:12px 2px;"><div style="font-weight:900;color:#000;font-size:clamp(13px,4.2vw,18px);white-space:nowrap;">麺固め</div></div>
+    </div>
+    <div style="text-align:center;font-weight:500;color:#000;font-size:11px;margin-top:10px;opacity:.7;">注文はそのままで家系MAX。</div>
+  </div>
+  <div style="margin:16px 14px 0;">
+    <div style="text-align:center;font-size:11px;font-weight:700;letter-spacing:.16em;color:#000;opacity:.7;">TOPPINGS</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:11px;">
+      <div style="background:#FFC72C;border-radius:14px;padding:11px 6px;text-align:center;font-weight:800;font-size:clamp(11px,3.4vw,13.5px);color:#000;white-space:nowrap;">チャーシュー</div>
+      <div style="background:#FFC72C;border-radius:14px;padding:11px 6px;text-align:center;font-weight:800;font-size:clamp(11px,3.4vw,13.5px);color:#000;white-space:nowrap;">国産ネギ</div>
+      <div style="background:#FFC72C;border-radius:14px;padding:11px 6px;text-align:center;font-weight:800;font-size:clamp(11px,3.4vw,13.5px);color:#000;white-space:nowrap;">ノリ</div>
+      <div style="background:#FFC72C;border-radius:14px;padding:11px 6px;text-align:center;font-weight:800;font-size:clamp(11px,3.4vw,13.5px);color:#000;white-space:nowrap;">なると</div>
+      <div style="background:#FFC72C;border-radius:14px;padding:11px 6px;text-align:center;font-weight:800;font-size:clamp(11px,3.4vw,13.5px);color:#000;white-space:nowrap;">ほうれん草</div>
+    </div>
+  </div>
+  <div style="margin:16px 14px 0;padding:16px 14px;background:#000;border-radius:20px;">
+    <div style="text-align:center;"><span style="display:inline-flex;align-items:center;gap:9px;font-weight:900;color:#FFC72C;font-size:18px;letter-spacing:.14em;"><span style="background:#DA291C;color:#fff;font-size:14px;font-weight:900;padding:4px 12px;border-radius:20px;">FREE</span>トッピング</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:13px;">
+      <div style="background:#FFC72C;border-radius:12px;text-align:center;padding:12px 2px;"><div style="font-weight:900;color:#000;font-size:clamp(11px,3.4vw,13px);white-space:nowrap;">激辛生唐辛子</div></div>
+      <div style="background:#FFC72C;border-radius:12px;text-align:center;padding:12px 2px;"><div style="font-weight:900;color:#000;font-size:clamp(12px,3.6vw,14px);white-space:nowrap;">マヨネーズ</div></div>
+      <div style="background:#FFC72C;border-radius:12px;text-align:center;padding:12px 2px;"><div style="font-weight:900;color:#000;font-size:clamp(12px,3.6vw,14px);white-space:nowrap;">ニンニクMAX</div></div>
+      <div style="background:#FFC72C;border-radius:12px;text-align:center;padding:12px 2px;"><div style="font-weight:900;color:#000;font-size:clamp(11px,3.4vw,13px);white-space:nowrap;">フライドオニオン</div></div>
+    </div>
+  </div>
+  <div style="margin:20px 14px 0;text-align:center;">
+    <div style="font-weight:800;color:#000;font-size:clamp(12px,3.6vw,15px);line-height:1.85;white-space:nowrap;">恒例の夏祭りMAX。<br>今回の限定は家系MAX油そば。<br>暑い夏にあっさりだけどMAX。<br>ライスと無料トッピングでMAX。<br>夏をすすりつくしMAX。</div>
+  </div>
+  <div style="margin:20px 14px 8px;text-align:center;">
+    <a href="about.dc.html" style="display:inline-block;text-decoration:none;">
+      <img src="images/img1-footer.png" alt="吉祥寺武蔵家" style="display:block;width:70%;max-width:260px;height:auto;margin:0 auto;">
+      <div style="margin-top:8px;font-size:11px;font-weight:900;color:#DA291C;letter-spacing:.08em;white-space:nowrap;">▲ お店の紹介はこちら</div>
+    </a>
+  </div>
+  <div style="margin-top:18px;background:#000;padding:20px 16px 24px;text-align:center;">
+    <a href="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%AD%A6%E8%94%B5%E9%87%8E%E5%B8%82%E5%90%89%E7%A5%A5%E5%AF%BA%E5%8D%97%E7%94%BA1-8-11" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#FFC72C;border-radius:14px;padding:14px;margin-bottom:14px;text-decoration:none;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DA291C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span style="font-weight:900;color:#000;font-size:clamp(13px,3.8vw,16px);letter-spacing:.02em;white-space:nowrap;">東京都武蔵野市吉祥寺南町<br>1-8-11 弥生ビル</span>
+    </a>
+    <div style="color:#FFC72C;font-weight:900;font-size:14px;letter-spacing:.1em;white-space:nowrap;">期間限定　7月中</div>
+    <div style="color:#fff;font-size:11px;opacity:.6;letter-spacing:.06em;margin-top:4px;">7/1 — 7/31 ・ なくなり次第終了</div>
+    <a href="index.dc.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:#FFC72C;color:#000;font-weight:900;font-size:13px;padding:10px 22px;border-radius:24px;text-decoration:none;letter-spacing:.04em;white-space:nowrap;">← 限定夏祭りページへ</a>
+    <div style="margin-top:12px;font-size:10px;letter-spacing:.24em;color:#fff;opacity:.5;font-weight:700;">THEE KICHIJOJI MUSASHIYA</div>
+  </div>
+</section>
+</div>
+
+</x-dc>
+</body>
+</html>
