@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -13,7 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; font-family: 'Noto Sans JP','Helvetica Neue',Helvetica,Arial,sans-serif; }
+    html { -webkit-text-size-adjust:100%; }
+    body { margin: 0; -webkit-tap-highlight-color:transparent; -webkit-font-smoothing:antialiased; overscroll-behavior-y:none; font-family: 'Noto Sans JP','Helvetica Neue',Helvetica,Arial,sans-serif; }
+    @media (max-width: 480px) {
+      [data-screen-label] > section, [data-screen-label] { max-width: 100% !important; box-shadow: none !important; }
+      body > div, #root > div { padding-top: 0 !important; }
+    }
     h1, h2, h3, h4, p { margin: 0; font-family: inherit; font-weight: inherit; font-size: inherit; line-height: inherit; color: inherit; letter-spacing: inherit; }
     @keyframes introOut { 0%{opacity:1;} 100%{opacity:0;visibility:hidden;} }
     @keyframes heroFocus { 0%{opacity:0;filter:blur(26px) brightness(1.35);transform:scale(1.12);} 60%{opacity:1;} 100%{opacity:1;filter:blur(0) brightness(1);transform:scale(1);} }
@@ -25,30 +30,33 @@
 </helmet>
 
 <sc-if value="{{ showIntro }}" hint-placeholder-val="{{ true }}">
-<div onClick="{{ skipIntro }}" style="position:fixed;inset:0;z-index:9999;background:#000;overflow:hidden;cursor:pointer;animation:introOut 1.4s ease 9.5s forwards;">
-  <img src="img2.jpg" alt="" style="position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 50%;opacity:0;animation:heroFocus 2.6s cubic-bezier(.18,.75,.25,1) .1s forwards;">
+<div onClick="{{ skipIntro }}" style="position:fixed;inset:0;height:100dvh;z-index:9999;background:#000;overflow:hidden;cursor:pointer;touch-action:manipulation;animation:introOut 1.4s ease 9.5s forwards;">
+  <img src="img2.jpg" alt="" style="position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:0;animation:heroFocus 2.6s cubic-bezier(.18,.75,.25,1) .1s forwards;">
   <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.5) 0%,rgba(0,0,0,.2) 45%,rgba(0,0,0,.7) 100%);"></div>
-  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;">
-    <div style="font-weight:900;color:#fff;font-size:clamp(34px,9.5vw,54px);letter-spacing:.18em;line-height:1.5;text-align:left;text-shadow:0 4px 22px rgba(0,0,0,.8);">
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:env(safe-area-inset-top) 24px env(safe-area-inset-bottom);">
+    <div style="font-weight:900;color:#fff;font-size:clamp(30px,11vw,54px);letter-spacing:.16em;line-height:1.45;text-align:left;text-shadow:0 4px 22px rgba(0,0,0,.8);">
       <div style="opacity:0;animation:heroRise 2s cubic-bezier(.18,.75,.25,1) 2.2s forwards;">Always</div>
       <div style="opacity:0;animation:heroRise 2s cubic-bezier(.18,.75,.25,1) 2.9s forwards;">by your</div>
       <div style="opacity:0;animation:heroRise 2s cubic-bezier(.18,.75,.25,1) 3.6s forwards;">side</div>
     </div>
     <div style="width:48px;height:2px;background:#FFC72C;margin:18px 0 12px;opacity:0;animation:heroLine .9s cubic-bezier(.22,.9,.3,1) 5s forwards;"></div>
-    <div style="font-weight:700;color:#FFC72C;font-size:clamp(11px,3.2vw,14px);letter-spacing:.34em;text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.7);opacity:0;animation:heroRise 1.8s cubic-bezier(.18,.75,.25,1) 5.2s forwards;">Kichijoji Musashiya · since 1999</div>
+    <div style="font-weight:700;color:#FFC72C;font-size:clamp(10px,3.4vw,14px);letter-spacing:.28em;text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.7);white-space:nowrap;opacity:0;animation:heroRise 1.8s cubic-bezier(.18,.75,.25,1) 5.2s forwards;">Thee Kichijoji Musashiya · since 1999</div>
   </div>
-  <div style="position:absolute;left:0;right:0;bottom:28px;text-align:center;color:rgba(255,255,255,.55);font-size:11px;font-weight:700;letter-spacing:.2em;opacity:0;animation:heroRise 1s ease 3s forwards;">TAP TO SKIP</div>
+  <div style="position:absolute;left:0;right:0;bottom:calc(28px + env(safe-area-inset-bottom));text-align:center;color:rgba(255,255,255,.55);font-size:11px;font-weight:700;letter-spacing:.2em;opacity:0;animation:heroRise 1s ease 3s forwards;">TAP TO SKIP</div>
 </div>
 </sc-if>
 
 <div style="min-height:100vh;background:#FFC72C;padding:12px 0 48px;display:flex;justify-content:center;" data-screen-label="About (EN)">
-<section style="width:100%;max-width:412px;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.18);">
+<section style="width:100%;max-width:412px;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.18);min-height:100vh;">
   <div style="background:#DA291C;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;">
     <div style="display:flex;align-items:center;gap:6px;"><span style="background:#fff;color:#DA291C;font-size:11px;font-weight:900;letter-spacing:.1em;padding:5px 10px;border-radius:20px;white-space:nowrap;">SINCE 1999</span><a href="about.dc.html" style="background:rgba(0,0,0,.28);color:#fff;font-size:11px;font-weight:900;letter-spacing:.1em;padding:5px 10px;border-radius:20px;white-space:nowrap;text-decoration:none;">日本語</a></div>
     <img src="img1.png" alt="Kichijoji Musashiya" style="display:block;width:min(160px,42vw);height:auto;">
   </div>
   <div style="position:relative;width:100%;height:clamp(210px,58vw,260px);overflow:hidden;background:#000;">
-    <img src="img2.jpg" alt="Storefront" style="position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 50%;">
+    <img src="img2.jpg" alt="Storefront" style="position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 50%;animation:heroFade 12s linear infinite;">
+    <img src="hero-noren.jpg" alt="Noren curtain" style="position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 62%;animation:heroFade 12s linear infinite;animation-delay:-9s;">
+    <img src="hero-ramen.jpg" alt="Iekei ramen" style="position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 55%;animation:heroFade 12s linear infinite;animation-delay:-6s;">
+    <img src="hero-counter.jpg" alt="At the counter" style="position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 50%;animation:heroFade 12s linear infinite;animation-delay:-3s;">
     <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.35) 0%,rgba(0,0,0,.05) 45%,rgba(0,0,0,.55) 100%);"></div>
     <div style="position:absolute;left:18px;bottom:16px;color:#fff;font-weight:900;font-size:clamp(18px,5.4vw,23px);letter-spacing:.14em;text-shadow:0 3px 14px rgba(0,0,0,.75);">Always by your side</div>
   </div>
